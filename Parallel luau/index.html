@@ -1,0 +1,1092 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Inheritance/">
+      
+      
+        <link rel="next" href="../ProxyTables/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>Parallel luau - Docs Idk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parallel-luau" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Docs Idk" class="md-header__button md-logo" aria-label="Docs Idk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs Idk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parallel luau
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs Idk" class="md-nav__button md-logo" aria-label="Docs Idk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs Idk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Basic%20Methods%20of%20Instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Methods of Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fixing%20Errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixing Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Parallel luau
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Parallel luau
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actors" class="md-nav__link">
+    Actors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communicating-between-threads" class="md-nav__link">
+    Communicating Between Threads
+  </a>
+  
+    <nav class="md-nav" aria-label="Communicating Between Threads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actor-messaging-api" class="md-nav__link">
+    Actor Messaging API
+  </a>
+  
+    <nav class="md-nav" aria-label="Actor Messaging API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sendmessage" class="md-nav__link">
+    SendMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindtomessageparallel" class="md-nav__link">
+    BindToMessage(Parallel)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-tables" class="md-nav__link">
+    Shared Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindables" class="md-nav__link">
+    Bindables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direct-data-model-communication" class="md-nav__link">
+    Direct Data Model Communication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-safety" class="md-nav__link">
+    Thread Safety
+  </a>
+  
+    <nav class="md-nav" aria-label="Thread Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unsafe" class="md-nav__link">
+    UnSafe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-parallel" class="md-nav__link">
+    Read Parallel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-safe" class="md-nav__link">
+    Local Safe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe" class="md-nav__link">
+    Safe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#race-conditions" class="md-nav__link">
+    Race Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoiding-race-conditions" class="md-nav__link">
+    Avoiding Race Conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-microprofiler" class="md-nav__link">
+    Using Microprofiler
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Microprofiler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-debug-library" class="md-nav__link">
+    Using the Debug Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-microprofiler-for-server" class="md-nav__link">
+    Accessing MicroProfiler for Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-multithread" class="md-nav__link">
+    Why multithread
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizing-parallel-luau-properly" class="md-nav__link">
+    Utilizing Parallel Luau properly
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilizing Parallel Luau properly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-many-actors-should-you-use" class="md-nav__link">
+    How many actors should you use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProxyTables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProxyTables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vector3%20Methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector3 Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actors" class="md-nav__link">
+    Actors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communicating-between-threads" class="md-nav__link">
+    Communicating Between Threads
+  </a>
+  
+    <nav class="md-nav" aria-label="Communicating Between Threads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actor-messaging-api" class="md-nav__link">
+    Actor Messaging API
+  </a>
+  
+    <nav class="md-nav" aria-label="Actor Messaging API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sendmessage" class="md-nav__link">
+    SendMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindtomessageparallel" class="md-nav__link">
+    BindToMessage(Parallel)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-tables" class="md-nav__link">
+    Shared Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindables" class="md-nav__link">
+    Bindables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direct-data-model-communication" class="md-nav__link">
+    Direct Data Model Communication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-safety" class="md-nav__link">
+    Thread Safety
+  </a>
+  
+    <nav class="md-nav" aria-label="Thread Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unsafe" class="md-nav__link">
+    UnSafe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-parallel" class="md-nav__link">
+    Read Parallel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-safe" class="md-nav__link">
+    Local Safe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe" class="md-nav__link">
+    Safe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#race-conditions" class="md-nav__link">
+    Race Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoiding-race-conditions" class="md-nav__link">
+    Avoiding Race Conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-microprofiler" class="md-nav__link">
+    Using Microprofiler
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Microprofiler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-debug-library" class="md-nav__link">
+    Using the Debug Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-microprofiler-for-server" class="md-nav__link">
+    Accessing MicroProfiler for Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-multithread" class="md-nav__link">
+    Why multithread
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizing-parallel-luau-properly" class="md-nav__link">
+    Utilizing Parallel Luau properly
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilizing Parallel Luau properly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-many-actors-should-you-use" class="md-nav__link">
+    How many actors should you use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="parallel-luau">Parallel luau</h1>
+<p>Parallel Luau is a way of achieving real multithreading in roblox using the Actor instance.</p>
+<div class="admonition info what is multithreading">
+<p class="admonition-title">Info</p>
+<p>Multithreading is a way of running multiple threads at the same time. Base Lua does not have this feature and when you use task.spawn or coroutines it is not really multithreading. The function is still only running on a single thread but Lua makes it so it looks like it is running at the same time</p>
+</div>
+<h2 id="actors">Actors</h2>
+<p>Actors is an Instance that allows scripts under that Actor to run in Parallel.</p>
+<div class="admonition warning actors and modules">
+<p class="admonition-title">Warning</p>
+<p>The Memory under Actors will not be the same so when you require a module a different table will be returned (if your module returns a table) than in the main Thread. This means you can't use modules to transfer data between Actors.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">--Script1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span> <span class="n">module</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(...)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">module</span><span class="p">.</span><span class="n">X</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">module</span><span class="p">.</span><span class="n">X</span><span class="p">)</span> <span class="c1">--&gt; 1</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">--Script2</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kd">local</span> <span class="n">module</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(...)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">task</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">module</span><span class="p">.</span><span class="n">X</span><span class="p">)</span> <span class="c1">--&gt; 1</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">--Script Under Actor</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kd">local</span> <span class="n">module</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(...)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">task</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">module</span><span class="p">.</span><span class="n">X</span><span class="p">)</span> <span class="c1">--&gt; nil</span>
+</code></pre></div>
+</div>
+<h2 id="communicating-between-threads">Communicating Between Threads</h2>
+<p>There are currently 4 ways to efficiently communicate between threads: Actor Messaging API, Shared Tables, Bindables, or Direct Data Model Communication.</p>
+<h3 id="actor-messaging-api">Actor Messaging API</h3>
+<p>The Actor Messaging API allows a script to receive data from other actors or the main thread. It currently consists of 3 methods: SendMessage(), BindToMessage(), and BindToMessageParallel().</p>
+<h5 id="sendmessage">SendMessage</h5>
+<p>Used to Send Messages between threads. The first argument would be the key while the rest will be the data to send
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">Actor</span> <span class="o">=</span> <span class="p">...</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">workerActor</span><span class="p">:</span><span class="n">SendMessage</span><span class="p">(</span><span class="s2">&quot;myKey&quot;</span><span class="p">,</span> <span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h5 id="bindtomessageparallel">BindToMessage(Parallel)</h5>
+<p>Used to receive data. If BindToMessageParallel was used then run the code in Parallel. The first Parameter is the key while the second Parameter is a callback.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">local</span> <span class="n">Actor</span> <span class="o">=</span> <span class="n">script</span><span class="p">:</span><span class="n">GetActor</span><span class="p">()</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Actor</span><span class="p">:</span><span class="n">BindToMessage</span><span class="p">(</span><span class="s2">&quot;myKey&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kr">end</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">Actor</span><span class="p">:</span><span class="n">BindToMessageParallel</span><span class="p">(</span><span class="s2">&quot;myKey&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kr">end</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="shared-tables">Shared Tables</h3>
+<p><a href="https://create.roblox.com/docs/reference/engine/datatypes/SharedTable">Shared Table</a> is like a normal table except its contents are shared between threads. This means that if you update a value in one thread, it will also update for other threads.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">local</span> <span class="n">SharedTableRegistry</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;SharedTableRegistry&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">local</span> <span class="n">SharedTable</span> <span class="o">=</span> <span class="n">SharedTableRegistry</span><span class="p">:</span><span class="n">GetSharedTable</span><span class="p">(</span><span class="s2">&quot;mySharedTable&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">--//Parallel Thread</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">SharedTable</span><span class="p">.</span><span class="n">X</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">--//Another Parallel Thread</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">SharedTable</span><span class="p">.</span><span class="n">X</span><span class="p">)</span> <span class="c1">--&gt; 1</span>
+</code></pre></div></p>
+<div class="admonition warning thread safety">
+<p class="admonition-title">Warning</p>
+<p>When using SharedTable you could have race conditions that can cause unwanted behaviors. If you want to know more about Thread Safety you can scroll down</p>
+</div>
+<h3 id="bindables">Bindables</h3>
+<p>One of the best ways currently (In my Opinion) to send data between threads is using Bindables as they are almost 4x more efficient than SharedTables.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">--//main Thread</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">local</span> <span class="n">Actor</span> <span class="o">=</span> <span class="p">...</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">local</span> <span class="n">BindableFunction</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">Bindable</span> 
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">-- assuming you have an event/function parented to the Actor</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="n">BindableFunction</span><span class="p">:</span><span class="n">Invoke</span><span class="p">(</span><span class="s2">&quot;DoSomething&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">--//Actor Script</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">local</span> <span class="n">Actor</span> <span class="o">=</span> <span class="n">script</span><span class="p">:</span><span class="n">GetActor</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kd">local</span> <span class="n">BindableFunction</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">.</span><span class="n">Bindable</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">BindableFunction</span><span class="p">.</span><span class="n">OnInvoke</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">task</span><span class="p">.</span><span class="n">desynchronized</span><span class="p">()</span> <span class="c1">-- runs in parallel</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="kr">return</span> <span class="n">doSomething</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="kr">end</span>
+</code></pre></div>
+<div class="admonition info tables and bindables">
+<p class="admonition-title">Info</p>
+<p>When Sending/Returning Tables, avoid large dictionaries if you can. If possible try to convert dictionaries into arrays. Another thing is if your array is going to consist of Strings that are showing up more than once you could send/return two tables, the data table, and a key table.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">--//before</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String1&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String1&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String3&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String2&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String2&quot;</span><span class="p">,</span>          
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="kr">return</span> <span class="n">data</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">-----------------------------------------</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1">--//after</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="kd">local</span> <span class="n">key</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>   <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String1&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>   <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String2&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>   <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;String3&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>          
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="p">}</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="c1">--to get the value of an index you can do key[valueAtIndex]</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="kr">return</span> <span class="n">data</span><span class="p">,</span><span class="n">key</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="c1">--or</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="kr">return</span> <span class="p">{</span><span class="n">data</span><span class="p">,</span><span class="n">key</span><span class="p">}</span>
+</code></pre></div>
+<p>This is much more efficient then as it's faster to Serialize numbers than it is for strings. And the size of the data being sent over is lower as well. (this can also apply to remotes)</p>
+</div>
+<h3 id="direct-data-model-communication">Direct Data Model Communication</h3>
+<p>This type of communication uses the Instances under the game and modifying/reading their properties. However, to maintain thread-safety roblox has systems that disallow threads that are desynchronized to read/write to the Instances.  </p>
+<h2 id="thread-safety">Thread Safety</h2>
+<p>Thread Safety is the avoidance of race conditions, Which happens when multiple threads try to read and write to a shared resource causing unwanted behaviors. When using Parallel lua with roblox's <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/DataModel">DataModel</a>. Roblox already has Thread Safety implemented into its Instances. Roblox has 4 Safety Levels: Unsafe, Read Parallel, Local Safe, and Safe. You can tell if a function/property has one of these tags by looking at the Roblox's API. If it has no tags then it defaults to UnSafe.</p>
+<div class="admonition info safety tags">
+<p class="admonition-title">Info</p>
+<h5 id="unsafe">UnSafe</h5>
+<p>Functions cannot be called and Properties cannot be read or written (modified) to</p>
+<h5 id="read-parallel">Read Parallel</h5>
+<p>Properties can be read but not written to</p>
+<h5 id="local-safe">Local Safe</h5>
+<p>If the instance was created was created under an actor then that actor can Read and Write to. Other actors can Read but not write. Functions can be called only in that actor.</p>
+<h5 id="safe">Safe</h5>
+<p>Functions can be called and Properties can be read and written to</p>
+</div>
+<h3 id="race-conditions">Race Conditions</h3>
+<p>Race Conditions are when a thread reads or writes data when another thread is not finished computing that data, causing data to overlap or create unexpected behaviors.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">--Example</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">local</span> <span class="n">SharedTable</span> <span class="o">=</span> <span class="p">...</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">SharedTable</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">--Let&#39;s say we are trying to add to a key called Value in the SharedTable</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">--Each Thread will add 100 to the Value Key</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">--//Parallel Thread</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">100</span> <span class="kr">do</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="n">SharedTable</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">SharedTable</span><span class="p">.</span><span class="n">Value</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kr">end</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c1">--//Another Parallel Thread</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">100</span> <span class="kr">do</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="n">SharedTable</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">SharedTable</span><span class="p">.</span><span class="n">Value</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="kr">end</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="c1">--//Outside of Parallel (After Parallel Threads ran)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">SharedTable</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span> 
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="c1">--&gt; This won&#39;t always print 200 as both Parallel are writing to The Value </span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="c1">--at the same time which can overlap</span>
+</code></pre></div></p>
+<div class="admonition info more explanation">
+<p class="admonition-title">Info</p>
+<p>The reason why it's happening can be shown in this diagram.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/ThreadSafety_.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Race Conditions" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/ThreadSafety_.png" /></a></p>
+<p>If you look at Value, each time a thread reads and writes it is reading and writing at the same time (this will not always happen). So it means that if both Threads run a for loop increasing Value by 100, the Value will not be 200 most of the time.</p>
+</div>
+<h3 id="avoiding-race-conditions">Avoiding Race Conditions</h3>
+<p>When working with the DataModel roblox already implemented Thread Safety as shown above. Otherwise what you can do is combine the data in a Synchronized state so there is a lesser chance of data overlapping with each other or if you are working with a shared table use the functions <a href="https://create.roblox.com/docs/reference/engine/datatypes/SharedTable#increment">increment()</a> or <a href="https://create.roblox.com/docs/reference/engine/datatypes/SharedTable#update">update()</a> to update data as it does an atomic update to the values.</p>
+<h2 id="using-microprofiler">Using Microprofiler</h2>
+<p>To open microprofiler on the client press ctrl-shift-f6. To pause press ctrl-P, If it opens an object viewer press ctrl-shift-f6 twice to reopen it and press ctrl-P again.</p>
+<h3 id="using-the-debug-library">Using the Debug Library</h3>
+<p>You can use profilebegin to help find how long your tasks takes.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="kr">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="kr">then</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="kr">return</span> <span class="kc">false</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="kr">end</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">math.sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="kr">do</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        <span class="kr">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            <span class="kr">return</span> <span class="kc">false</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="kr">end</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="kr">end</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="kr">return</span> <span class="kc">true</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="kr">end</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">calculatePrimesFrom</span><span class="p">(</span><span class="n">from</span><span class="p">,</span><span class="n">to</span><span class="p">)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="n">debug</span><span class="p">.</span><span class="n">profilebegin</span><span class="p">(</span><span class="s2">&quot;primes&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="kd">local</span> <span class="n">primes</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    <span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="n">from</span><span class="p">,</span><span class="n">to</span> <span class="kr">do</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        <span class="nb">table.insert</span><span class="p">(</span><span class="n">primes</span><span class="p">,</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="kr">end</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="n">debug</span><span class="p">.</span><span class="n">profileend</span><span class="p">()</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="kr">return</span> <span class="n">primes</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="kr">end</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="n">calculatePrimesFrom</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
+</code></pre></div>
+This will allow you to see how long primes takes to calculate.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/primes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/primes.png" /></a></p>
+<p>which you can see here takes 1.313 ms</p>
+<div class="admonition info how to look for profiles">
+<p class="admonition-title">Info</p>
+<p>Profiles will have a unique color depending on the name, so each profile will have the each color each time. To look for a profile look for colored boxes that stand out more.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/primes1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/primes1.png" /></a></p>
+<p>But if your profiles last very short you can sort them by going to <code>Groups</code> and disabling [ALL] and enabling just Script and it will make it easier to spot</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/primes2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/primes2.png" /></a></p>
+<p>Some other groups I recommend enabling are <code>Lua</code> and <code>TaskQueue</code>. Lua will display the Scripts while TaskQueue will display stuff like the Sleep timer.</p>
+</div>
+<h3 id="accessing-microprofiler-for-server">Accessing MicroProfiler for Server</h3>
+<p>To see the microprofiler of a server you would need to go to Developer Console (f9) and go to the <code>MicroProfiler</code> tab.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/serverMP.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/serverMP.png" /></a></p>
+<p>After that, I recommend setting <code>Frames Per Second</code> to 60 and <code>Seconds to Record</code> to 4 (maximum time). And to Record press <code>Start Recording</code>. After it is done Recording it will display a path in which it is saved. Follow that and you can view the data in a browser.</p>
+<h2 id="why-multithread">Why multithread</h2>
+<p>Multithreading can help increase performance by a lot. For example, if we try to calculate the primes from 0-100000 it will take the server</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/p1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/p1.png" /></a></p>
+<p>The tasks takes 26.920ms to calculate which is going to cause performance issues as each frame lasts 1/60 seconds which is ~16ms and since the task takes over 16ms the server will lag for 10ms.</p>
+<p>But if we split the tasks into 8 separate tasks</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/p8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/p8.png" /></a></p>
+<p>each task only takes about 4ms and since they are running in parallel to each other calculating 100000 primes only takes 4ms in total.</p>
+<h2 id="utilizing-parallel-luau-properly">Utilizing Parallel Luau properly</h2>
+<p>When using Parallel Luau it is recommended to separate tasks into smaller tasks. So let's say you have a task that takes 5ms to compute on a single thread. What you can do is split the tasks into 5 threads, Each chunk taking ~1 ms to compute, Saving 4 ms. Also when using Parallel Luau avoid yielding threads with wait or coroutine. Because when you use task.wait it will bring it out of parallel. And it is also recommended to Avoid long tasks as it will cause the main Thread (not to be confused with the Main script in the Image) to wait for that parallel task to finish. Show below with the <code>Sleep</code> timer.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/sleep.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/sleep.png" /></a></p>
+<p>What we could have done better here was to split the tasks into smaller tasks and use more Actors.</p>
+<div class="admonition warning splitting too much">
+<p class="admonition-title">Warning</p>
+<p>When using Parallel luau try not to split the tasks to into very small sections. If a simple task takes 1 ms on a single thread and you try to split it into 2 separate threads you could see a .4 ms decrease in time but if you split it into 4 threads then you could see it take longer than on a single thread as other factors can cause delay such as going into parallel and sending data across.</p>
+</div>
+<h3 id="how-many-actors-should-you-use">How many actors should you use</h3>
+<p>On a roblox server, the amount of workers is determined by the maximum player count (<a href="https://devforum.roblox.com/t/live-game-servers-do-not-allocate-more-cores-for-parallelized-games/2460052/4?u=haotian2006">source</a>). While on the client it depends on the client's device. Workers are just how many threads can be utilized. Every time you run a parallel task the task will go to one of these workers. Roblox will try to balance which Worker should a task go to.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/workers1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/workers1.png" /></a></p>
+<p>So when determining the number of Actors you want to use it is usually recommended to use more Actors than workers as roblox will balance the tasks between workers.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/multipleactors.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="https://raw.githubusercontent.com/haotian2006/HelperDocs-contributions/master/Images/multipleactors.png" /></a></p>
+<p>but avoid using too many or else other problems such as memory will show up.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Parallel Luau is not an easy thing to explain and understand so don't worry if you don't understand. If you want to see the code I used for the Images above, make a copy of this <a href="https://www.roblox.com/games/14931452798/Parallel-Luau-Example">place</a>. If you want to learn more about Parallel Luau check out <a href="https://create.roblox.com/docs/fr-fr/scripting/multithreading#parallel-programming-model">here</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

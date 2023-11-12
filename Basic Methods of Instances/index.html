@@ -1,0 +1,785 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Fixing%20Errors/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>Basic Methods of Instances - Docs Idk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-methods-of-instances" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Docs Idk" class="md-header__button md-logo" aria-label="Docs Idk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs Idk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basic Methods of Instances
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs Idk" class="md-nav__button md-logo" aria-label="Docs Idk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs Idk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Basic Methods of Instances
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Basic Methods of Instances
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#addtagtag-string-void" class="md-nav__link">
+    AddTag(tag: string): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hastagtag-string-boolean" class="md-nav__link">
+    HasTag(tag: string): boolean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removetagtag-string-void" class="md-nav__link">
+    RemoveTag(tag: string): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-instance" class="md-nav__link">
+    Clone(): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroy-void" class="md-nav__link">
+    Destroy(): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitforchildchildname-string-timeout-number-instance" class="md-nav__link">
+    WaitForChild(childName: String, timeOut: number): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findfirstchildname-string-recursive-boolean-instance" class="md-nav__link">
+    FindFirstChild(name: string, recursive: boolean): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findfirstancestorname-string-instance" class="md-nav__link">
+    FindFirstAncestor(name: string): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setattributeattribute-string-value-variant-void" class="md-nav__link">
+    SetAttribute(attribute: string, value: Variant): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getattributeattribute-string-variant" class="md-nav__link">
+    GetAttribute(attribute: string): Variant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getchildren-objects" class="md-nav__link">
+    GetChildren(): Objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getdescendants-objects" class="md-nav__link">
+    GetDescendants: Objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getpropertychangedsignalproperty-string-rbxscriptsignal" class="md-nav__link">
+    GetPropertyChangedSignal(property: string): RBXScriptSignal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isaclassname-stringboolean" class="md-nav__link">
+    IsA(className: string):boolean
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fixing%20Errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixing Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Parallel%20luau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel luau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProxyTables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProxyTables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vector3%20Methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector3 Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#addtagtag-string-void" class="md-nav__link">
+    AddTag(tag: string): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hastagtag-string-boolean" class="md-nav__link">
+    HasTag(tag: string): boolean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removetagtag-string-void" class="md-nav__link">
+    RemoveTag(tag: string): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-instance" class="md-nav__link">
+    Clone(): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroy-void" class="md-nav__link">
+    Destroy(): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitforchildchildname-string-timeout-number-instance" class="md-nav__link">
+    WaitForChild(childName: String, timeOut: number): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findfirstchildname-string-recursive-boolean-instance" class="md-nav__link">
+    FindFirstChild(name: string, recursive: boolean): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findfirstancestorname-string-instance" class="md-nav__link">
+    FindFirstAncestor(name: string): Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setattributeattribute-string-value-variant-void" class="md-nav__link">
+    SetAttribute(attribute: string, value: Variant): void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getattributeattribute-string-variant" class="md-nav__link">
+    GetAttribute(attribute: string): Variant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getchildren-objects" class="md-nav__link">
+    GetChildren(): Objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getdescendants-objects" class="md-nav__link">
+    GetDescendants: Objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getpropertychangedsignalproperty-string-rbxscriptsignal" class="md-nav__link">
+    GetPropertyChangedSignal(property: string): RBXScriptSignal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isaclassname-stringboolean" class="md-nav__link">
+    IsA(className: string):boolean
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="basic-methods-of-instances">Basic Methods of Instances</h1>
+<h2 id="addtagtag-string-void">AddTag(tag: string): void</h2>
+<p>This method adds a tag to the instance which can be used by <a href="https://create.roblox.com/docs/reference/engine/classes/CollectionService">CollectionService</a> using CollectionService:GetAllTags(). This method also invokes CollectionService:GetInstanceAddedSignal().</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">cs</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;CollectionService&quot;</span><span class="p">)</span> 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">,</span><span class="n">workspace</span><span class="p">)</span> 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">part</span><span class="p">:</span><span class="n">AddTag</span><span class="p">(</span><span class="s2">&quot;MyTag&quot;</span><span class="p">)</span> 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">part</span><span class="p">:</span><span class="n">HasTag</span><span class="p">(</span><span class="s2">&quot;MyTag&quot;</span><span class="p">))</span> <span class="c1">--&gt; true</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="p">:</span><span class="n">GetTagged</span><span class="p">(</span><span class="s2">&quot;MyTag&quot;</span><span class="p">))</span> <span class="c1">--&gt; {Part}</span>
+</code></pre></div>
+<h2 id="hastagtag-string-boolean">HasTag(tag: string): boolean</h2>
+<p>returns true/false if the instance has the give tag</p>
+<h2 id="removetagtag-string-void">RemoveTag(tag: string): void</h2>
+<p>This method removes the a tag set to the instance.</p>
+<h2 id="clone-instance">Clone(): Instance</h2>
+<p>Creates a Copy of the Instance and its Children. The Parent of the cloned Instance will be set to nil. </p>
+<h2 id="destroy-void">Destroy(): void</h2>
+<p>Sets the Parent property to nil, but unlike the Remove() method, Destroy() locks the parent and disconnects all connections. This will also call the Destroy methods of the children as well.</p>
+<div class="admonition info what does locking the parent mean">
+<p class="admonition-title">Info</p>
+<p>Locking the parent means that the object cannot be reused and if you try to re-set the parent you will get the error: <span style="color:red"> The Parent property of [Instance] is locked, current parent: NULL, new parent [Instance]  </span>.</p>
+</div>
+<h2 id="waitforchildchildname-string-timeout-number-instance">WaitForChild(childName: String, timeOut: number): Instance</h2>
+<p>Returns the child of the Instance with the given name. If the child does not exist it will yield the code for the duration of timeOut (if not given default to 5) or until it exist. If timeOut is reached and the child still does not exist, if will send an warning: <span style="color:yellow"> Infinite yield possible on: [line]  </span>.</p>
+<h2 id="findfirstchildname-string-recursive-boolean-instance">FindFirstChild(name: string, recursive: boolean): Instance</h2>
+<p>This will return the first child with the given name, if no child with the name is found then it will return nil. If given a 2<sup>nd</sup> argument is true then it will check the children of the children... aka the descendants. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">part1</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">part2</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">,</span><span class="n">part1</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">part2</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;Part2&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">local</span> <span class="n">part3</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">,</span><span class="n">part2</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">part3</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;Part3&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">part1</span><span class="p">:</span><span class="n">FindFirstChild</span><span class="p">(</span><span class="s2">&quot;Part2&quot;</span><span class="p">))</span> <span class="c1">--&gt; Part2, Part2 is a child of part1</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">part1</span><span class="p">:</span><span class="n">FindFirstChild</span><span class="p">(</span><span class="s2">&quot;Part3&quot;</span><span class="p">))</span> <span class="c1">--&gt; nil, Part is not a child of part1</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">part1</span><span class="p">:</span><span class="n">FindFirstChild</span><span class="p">(</span><span class="s2">&quot;Part3&quot;</span><span class="p">,</span><span class="kc">true</span><span class="p">))</span> <span class="c1">--&gt; Part3, this returns Part3 because we told it to find the descendants of the part as well </span>
+</code></pre></div>
+<div class="admonition info waitforchild vs findfirstchild">
+<p class="admonition-title">Info</p>
+<p>WaitForChild is used when you are not sure if a child exists such as when replicating  stuff</p>
+</div>
+<h2 id="findfirstancestorname-string-instance">FindFirstAncestor(name: string): Instance</h2>
+<p>This will return the first ancestor(parent of the parent of the parent...) with the given name. If no ancestor with the name is found then return nil.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">local</span> <span class="n">part1</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">part1</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;ParentPart&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">local</span> <span class="n">part2</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">,</span><span class="n">part1</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">part2</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;ChildPart&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">local</span> <span class="n">part3</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">,</span><span class="n">part2</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">part3</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;SubChildPart&quot;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">part3</span><span class="p">:</span><span class="n">FindFirstAncestor</span><span class="p">(</span><span class="s2">&quot;ChildPart&quot;</span><span class="p">))</span> <span class="c1">--&gt; ChildPart</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">part3</span><span class="p">:</span><span class="n">FindFirstAncestor</span><span class="p">(</span><span class="s2">&quot;ParentPart&quot;</span><span class="p">))</span> <span class="c1">--&gt; ParentPart</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">part3</span><span class="p">:</span><span class="n">FindFirstAncestor</span><span class="p">(</span><span class="s2">&quot;Parent&quot;</span><span class="p">))</span> <span class="c1">--&gt; nil, part3 has no ancestor is named Parent </span>
+</code></pre></div>
+<h2 id="setattributeattribute-string-value-variant-void">SetAttribute(attribute: string, value: Variant): void</h2>
+<p>Sets the given attribute to the given value. If value is nil then the Attribute will be removed.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span> 
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">part</span><span class="p">:</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;Health&quot;</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> 
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">part</span><span class="p">:</span><span class="n">GetAttribute</span><span class="p">(</span><span class="s2">&quot;Health&quot;</span><span class="p">))</span> <span class="c1">--&gt; 20</span>
+</code></pre></div>
+<div class="admonition warning limitations">
+<p class="admonition-title">Warning</p>
+<p>Naming requirements and restrictions:</p>
+<ul>
+<li>Names must only use alphanumeric characters and underscore</li>
+<li>No spaces or unique symbols are allowed</li>
+<li>Strings must be 100 characters or less</li>
+<li>Names are not allowed to start with RBX unless the caller is a Roblox core-script (reserved for Roblox)</li>
+</ul>
+</div>
+<h2 id="getattributeattribute-string-variant">GetAttribute(attribute: string): Variant</h2>
+<p>This will return the value stored in the given attributes, nil if the attribute does not exist </p>
+<h2 id="getchildren-objects">GetChildren(): Objects</h2>
+<p>Returns and array of all the children under the Instance. </p>
+<h2 id="getdescendants-objects">GetDescendants: Objects</h2>
+<p>Similar to GetChildren() but returns an array with the Children of the Children of the Children as well.</p>
+<h2 id="getpropertychangedsignalproperty-string-rbxscriptsignal">GetPropertyChangedSignal(property: string): RBXScriptSignal</h2>
+<p>Returns an event which fires when the given property is modified</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>GetPropertyChangedSignal will not fire if the Property being changed is being updated via Physics. Ex: trying to detect if a Player moved by doing GetPropertyChangedSignal("Position"). This will not fire when the player moves because the player is moved using Physics.</p>
+</div>
+<h2 id="isaclassname-stringboolean">IsA(className: string):boolean</h2>
+<p>Returns true if the Instance class matches or is a sub-class of the given class</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">part</span><span class="p">:</span><span class="n">IsA</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">))</span> <span class="c1">--&gt; true, Part is a Part</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">part</span><span class="p">:</span><span class="n">IsA</span><span class="p">(</span><span class="s2">&quot;BasePart&quot;</span><span class="p">))</span> <span class="c1">--&gt; true, Part is a sub-class of BasePart</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">part</span><span class="p">:</span><span class="n">IsA</span><span class="p">(</span><span class="s2">&quot;Model&quot;</span><span class="p">))</span> <span class="c1">--&gt; false, part is not a model  </span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
